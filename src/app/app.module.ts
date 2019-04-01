@@ -7,10 +7,11 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { PersonService } from './person.service';
+import { CPeopleComponent } from './c-people/c-people.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, CPeopleComponent ],
   bootstrap:    [ AppComponent ],
   providers: [InMemoryDataService, PersonService]
 })
