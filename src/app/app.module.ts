@@ -10,7 +10,14 @@ import { PersonService } from './person.service';
 import { CPeopleComponent } from './c-people/c-people.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, 
+  // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+  HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+  ],
   declarations: [ AppComponent, CPeopleComponent ],
   bootstrap:    [ AppComponent ],
   providers: [InMemoryDataService, PersonService]

@@ -1,8 +1,10 @@
 <h1>list</h1>
-<ul>
-  <li *ngFor="let person of people">
-    <a>
-      <span>{{person.id}}</span> {{person.name}}
-    </a>
-  </li>
-</ul>
+<div>
+  <ul>
+    <li *ngFor="let person of People">
+      <a>
+        <span>{{person.id}}</span> - name: {{person.name}}
+      </a>
+    </li>
+  </ul>
+</div>
